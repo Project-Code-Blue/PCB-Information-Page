@@ -1,0 +1,67 @@
+name: "Bug"
+description: Something isn't working as expected in staging or production.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - "Local / Dev"
+        - "Staging"
+        - "Production"
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "Critical - blocks core functionality"
+        - "High - major feature broken"
+        - "Medium - workaround exists"
+        - "Low - cosmetic / minor"
+    validations:
+      required: true
+  - type: input
+    id: related-story
+    attributes:
+      label: Related Story / Epic (if known)
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Screenshots / Logs / Additional Context
+    validations:
+      required: false

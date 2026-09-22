@@ -1,0 +1,71 @@
+name: "User Story"
+description: A single, sprint-sized piece of user-facing functionality, estimable and testable.
+title: "[Story]: "
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Stories describe functionality from a user's perspective and should be small enough to complete within a single sprint. Link this Story to its parent Epic if one exists.
+  - type: input
+    id: parent-epic
+    attributes:
+      label: Parent Epic
+      description: Reference the parent Epic issue (e.g., #12), if applicable.
+    validations:
+      required: false
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Standard "As a / I want / So that" format.
+      value: |
+        As a [Officer / Admin / Chief],
+        I want [capability],
+        So that [benefit/value].
+    validations:
+      required: true
+  - type: input
+    id: use-case
+    attributes:
+      label: Related Use Case ID
+      placeholder: e.g., UC5 - Join Detail
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Testable conditions that define "done" for this story. Given/When/Then format encouraged.
+      value: |
+        - [ ] Given ___, when ___, then ___
+        - [ ]
+    validations:
+      required: true
+  - type: dropdown
+    id: points
+    attributes:
+      label: Story Point Estimate
+      description: Assigned by the team during Sprint Planning.
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "5"
+        - "8"
+        - "13"
+        - "Needs estimation"
+    validations:
+      required: false
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done
+      value: |
+        - [ ] Code implemented and merged to dev
+        - [ ] Unit tests written (>= 90% coverage)
+        - [ ] PR reviewed and approved by 2 team members
+        - [ ] Deployed to staging and verified
+        - [ ] No known open defects
+    validations:
+      required: false

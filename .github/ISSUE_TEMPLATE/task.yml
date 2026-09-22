@@ -1,0 +1,47 @@
+name: "Task"
+description: A discrete, technical unit of work, usually a subtask of a Story or Epic (e.g., a chore, setup step, or non-user-facing item).
+title: "[Task]: "
+labels: ["task"]
+body:
+  - type: input
+    id: parent
+    attributes:
+      label: Parent Story / Epic
+      description: Reference the parent issue (e.g., #34), if applicable.
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done and why?
+    validations:
+      required: true
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: Subtasks
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+  - type: dropdown
+    id: estimate
+    attributes:
+      label: Estimate
+      options:
+        - "< 1 hour"
+        - "1-2 hours"
+        - "Half day"
+        - "Full day"
+        - "2+ days (consider splitting)"
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Technical Notes
+      description: Implementation details, relevant files/services, dependencies (e.g., Docker config, MS SQL Server schema, Windows Server hosting constraints).
+    validations:
+      required: false

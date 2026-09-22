@@ -1,0 +1,66 @@
+name: "Epic"
+description: A large body of work that delivers a major feature or capability, broken down into multiple Stories.
+title: "[Epic]: "
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Epics represent a significant piece of functionality (e.g., "Patrol Scheduling", "On-Call Management") that spans multiple sprints and is broken down into Stories. Typically created by the PM or Lead Architect during Requirements Gathering or Backlog grooming.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A short, high-level description of what this Epic covers and why it matters to the department.
+      placeholder: e.g., Enable officers to view, join, and cancel Patrol shifts through a calendar/list interface.
+    validations:
+      required: true
+  - type: textarea
+    id: business-value
+    attributes:
+      label: Business Value / Goal
+      description: Why is this important to the Sponsor or department? What problem does it solve?
+    validations:
+      required: true
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Related Use Cases
+      description: List the Use Case ID(s) and name(s) from the Project Plan this Epic covers.
+      placeholder: |
+        UC10 - View Patrols
+        UC12 - Join Patrol
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: High-Level Acceptance Criteria
+      description: What must be true for this Epic to be considered complete?
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: stories
+    attributes:
+      label: Linked Stories
+      description: Checklist of Story issues that make up this Epic. Link with "#issue-number" once each Story is created.
+      value: |
+        - [ ] #
+    validations:
+      required: false
+  - type: dropdown
+    id: target-milestone
+    attributes:
+      label: Target Deliverable
+      description: Which Deliverable (from the Project Plan) does this Epic support?
+      options:
+        - "Deliverable 1 - Requirements & Architecture"
+        - "Deliverable 2 - Prototype & Staging"
+        - "Deliverable 3 - Core Operational Features"
+        - "Deliverable 4 - Final Testing & Handoff"
+        - "Unscheduled / Backlog"
+    validations:
+      required: false

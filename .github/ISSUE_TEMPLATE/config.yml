@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Team Discord
+    url: https://discord.com
+    about: Questions about a ticket or the project in general should go to the team Discord first.

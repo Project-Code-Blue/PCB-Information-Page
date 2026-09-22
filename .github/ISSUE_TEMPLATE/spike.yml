@@ -1,0 +1,53 @@
+name: "Spike"
+description: A time-boxed research or investigation task to reduce uncertainty before committing to implementation.
+title: "[Spike]: "
+labels: ["spike"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Spikes answer a specific technical question (e.g., "Will Docker on the Town's Windows Server support our stack?") within a fixed time box. The deliverable is knowledge or a recommendation, not shippable code.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / Unknown
+      description: What specific question needs to be answered?
+      placeholder: e.g., Can our Docker containers run reliably on the Town's Windows Server environment without licensing or compatibility issues?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / Why This Matters
+    validations:
+      required: false
+  - type: dropdown
+    id: timebox
+    attributes:
+      label: Time Box
+      description: Maximum time to spend before reporting back, regardless of whether the question is fully answered.
+      options:
+        - "2 hours"
+        - "Half day"
+        - "1 day"
+        - "2 days"
+        - "1 sprint (max)"
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Research Approach
+      description: How will you investigate? (prototypes, documentation review, vendor/IT contact, etc.)
+    validations:
+      required: false
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable / Definition of Done
+      value: |
+        - [ ] Findings documented in this issue (or linked doc)
+        - [ ] Recommendation made
+        - [ ] Follow-up Stories/Tasks created if needed
+    validations:
+      required: true
