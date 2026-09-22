@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Epics represent a significant piece of functionality (e.g., "Patrol Scheduling", "On-Call Management") that spans multiple sprints and is broken down into Stories. Typically created by the PM or Lead Architect during Requirements Gathering or Backlog grooming.
+        Epics represent a significant piece of functionality (e.g., "Patrol Scheduling", "On-Call Management") that spans multiple sprints and is broken down into Stories. Typically created by the PM or Lead Architect during Requirements Gathering or Backlog grooming. Link child Stories using GitHub's sub-issue feature, not this description.
   - type: textarea
     id: summary
     attributes:
@@ -42,15 +42,6 @@ body:
         - [ ]
     validations:
       required: true
-  - type: textarea
-    id: stories
-    attributes:
-      label: Linked Stories
-      description: Checklist of Story issues that make up this Epic. Link with "#issue-number" once each Story is created.
-      value: |
-        - [ ] #
-    validations:
-      required: false
   - type: dropdown
     id: target-milestone
     attributes:

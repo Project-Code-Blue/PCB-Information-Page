@@ -53,12 +53,6 @@ body:
         - "Low - cosmetic / minor"
     validations:
       required: true
-  - type: input
-    id: related-story
-    attributes:
-      label: Related Story / Epic (if known)
-    validations:
-      required: false
   - type: textarea
     id: additional
     attributes:

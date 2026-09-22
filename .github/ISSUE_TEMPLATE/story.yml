@@ -6,14 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Stories describe functionality from a user's perspective and should be small enough to complete within a single sprint. Link this Story to its parent Epic if one exists.
-  - type: input
-    id: parent-epic
-    attributes:
-      label: Parent Epic
-      description: Reference the parent Epic issue (e.g., #12), if applicable.
-    validations:
-      required: false
+        Stories describe functionality from a user's perspective and should be small enough to complete within a single sprint. Attach this Story to its parent Epic using GitHub's sub-issue feature, not this description.
   - type: textarea
     id: user-story
     attributes:

@@ -3,13 +3,10 @@ description: A discrete, technical unit of work, usually a subtask of a Story or
 title: "[Task]: "
 labels: ["task"]
 body:
-  - type: input
-    id: parent
+  - type: markdown
     attributes:
-      label: Parent Story / Epic
-      description: Reference the parent issue (e.g., #34), if applicable.
-    validations:
-      required: false
+      value: |
+        Attach this Task to its parent Story or Epic using GitHub's sub-issue feature, not this description.
   - type: textarea
     id: description
     attributes:
